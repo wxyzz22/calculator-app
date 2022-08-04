@@ -36,3 +36,223 @@
     transform: rotate(360deg);
   }
 }
+.theme-1 {
+  --main-bg-color: hsl(222, 26%, 31%);
+  --keyboard-bg-color: hsl(223, 31%, 20%);
+  --display-bg-color: hsl(224, 36%, 15%);
+
+  --del-key-bg: hsl(204, 36%, 58%);
+  --del-key-shadow: hsl(224, 28%, 35%);
+  --eval-key-bg: hsl(6, 63%, 50%);
+  --eval-key-shadow: hsl(6, 70%, 34%);
+  --num-key-bg: hsl(30, 25%, 89%);
+  --num-key-bg-active: hsl(0, 0%, 100%);
+  --num-key-shadow: hsl(28, 16%, 65%);
+
+  --reset-del-text: hsl(0, 0%, 100%);
+  --title-display-text: hsl(0, 0%, 100%);
+  --gen-key-text: hsl(221, 14%, 31%);
+  --eval-text: hsl(0, 0%, 100%);
+}
+
+.theme-2 {
+  --main-bg-color: hsl(0, 0%, 90%);
+  --keyboard-bg-color: hsl(0, 5%, 81%);
+  --display-bg-color: hsl(0, 0%, 93%);
+
+  --del-key-bg: hsl(185, 42%, 37%);
+  --del-key-shadow: hsl(185, 58%, 25%);
+  --eval-key-bg: hsl(25, 98%, 40%);
+  --eval-key-shadow: hsl(25, 99%, 27%);
+  --num-key-bg: hsl(45, 7%, 89%);
+  --num-key-shadow: hsl(35, 11%, 61%);
+
+  --reset-del-text: hsl(0, 0%, 100%);
+  --title-display-text: hsl(60, 10%, 19%);
+  --gen-key-text: hsl(60, 10%, 19%);
+  --eval-text: hsl(0, 0%, 100%);
+}
+
+.theme-3 {
+  --main-bg-color: hsl(268, 75%, 9%);
+  --keyboard-bg-color: hsl(268, 71%, 12%);
+  --display-bg-color: hsl(268, 71%, 12%);
+
+  --del-key-bg: hsl(281, 89%, 26%);
+  --del-key-shadow: hsl(285, 91%, 52%);
+  --eval-key-bg: hsl(176, 100%, 44%);
+  --eval-key-shadow: hsl(177, 92%, 70%);
+  --num-key-bg: hsl(268, 47%, 21%);
+  --num-key-shadow: hsl(290, 70%, 36%);
+
+  --reset-del-text: hsl(0, 0%, 100%);
+  --title-display-text: hsl(52, 100%, 62%);
+  --gen-key-text: hsl(52, 100%, 62%);
+  --eval-text: hsl(198, 20%, 13%);
+}
+
+div {
+  font-family: 'League Spartan', sans-serif;
+  border-radius: 7px;
+}
+
+button {
+  border-radius: 7px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.body-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-bg-color);
+  border-radius: 0px;
+}
+
+.App {
+  /* border: 3px solid red; */
+  min-height: 500px;
+  min-width: 400px;
+}
+
+.header {
+  /* border: 3px solid teal; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-height: 50px;
+  padding-bottom: 5px;
+}
+
+.display-panel {
+  /* background-color: yellowgreen; */
+  text-align: right;
+  font-size: 32px;
+  padding: 12px 12px 7px 12px;
+  margin: 13px 0;
+  min-height: 40px;
+  background-color: var(--display-bg-color);
+  color: var(--title-display-text);
+}
+
+.keyboard {
+  /* border: 3px solid turquoise; */
+  padding: 3px;
+  background-color: var(--keyboard-bg-color);
+}
+
+.title {
+  max-height: 29px;
+  font-size: 26px;
+  color: var(--title-display-text);
+}
+
+.theme-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.theme-box-title {
+  margin-right: 10px;
+  padding-top: 2px;
+  font-size: 10px;
+  color: var(--title-display-text);
+}
+
+
+.theme-box-num {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 6px 2.5px 7px;
+  color: var(--title-display-text);
+}
+
+.theme-box-num div {
+  padding-top: 4px;
+  max-height: 15px;
+  font-size: 10px;
+}
+
+.theme-box-button {
+  display: flex;
+  min-height: 17px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-radius: 7px;
+  padding: 0.7px 0.7px;
+  background-color: var(--keyboard-bg-color);
+}
+
+.theme-box-button button {
+  border-radius: 20px;
+  border: 0px;
+}
+
+.standard-button {
+  display: grid;
+  padding: 10px 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.long-button {
+  display: grid;
+  padding: 0px 10px 10px 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.button {
+  padding-top: 8px;
+  border: 0px;
+  background-color: var(--keyboard-bg-color);
+}
+
+.button-active {
+  background-color: orange;
+}
+
+.gen-key {
+  color: var(--gen-key-text);
+  font-size: 25px;
+  background-color: var(--num-key-bg);
+  box-shadow: 0px 3px 0px 0px var(--num-key-shadow);
+}
+
+.gen-key:active {
+  background-color: var(--num-key-bg-active);
+}
+
+.del-key {
+  color: var(--reset-del-text);
+  font-size: 20px;
+  background-color: var(--del-key-bg);
+  box-shadow: 0px 1px 0px 0px var(--del-key-shadow);
+}
+
+.eval-key {
+  color: var(--eval-text);
+  font-size: 20px;
+  padding: 10px 0px 7px 0px;
+  background-color: var(--eval-key-bg);
+  box-shadow: 0px 1px 0px 0px var(--eval-key-shadow);
+}
+
+.reset-key {
+  color: var(--reset-del-text);
+  font-size: 20px;
+  padding: 10px 0px 7px 0px;
+  background-color: var(--del-key-bg);
+  box-shadow: 0px 1px 0px 0px var(--del-key-shadow);
+}
